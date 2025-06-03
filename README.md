@@ -50,7 +50,7 @@ You made it in 3 moves! Here's your path:
 [2, 4]
 [4, 3]
 ## 📦 Tech Stack
-Language: JavaScript (or whatever you want — logic’s the same)
+Language: JavaScript
 
 Algorithm: Breadth-First Search (BFS)
 
