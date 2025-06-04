@@ -77,7 +77,7 @@ function knightMoves(start, end) {
   const startNode = m.getNode(start[0], start[1]);
   const endNode = m.getNode(end[0], end[1]);
 
-  const queue = [[startNode]];
+  const queue = [[startNode]]; // -> FIFO queue
   startNode.visited = true;
 
   while (queue[0]) {
@@ -90,18 +90,20 @@ function knightMoves(start, end) {
       let array = [];
       path.map((element) => array.push(element.coords));
 
-      array.forEach((element) => console.log(element));
+      for (let step of path) {
+        console.log(step.coords);
+      }
     }
 
     for (const move of node.moves) {
       if (!move.visited) {
         move.visited = true;
-        queue.push([...path, move]);
+        queue.push([...path, move]); //-> BFS 
       }
     }
   }
 
-  return[];
+  return [];
 }
 
 knightMoves([3, 3], [1, 1]);
